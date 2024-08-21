@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnDisparoPlayer : MonoBehaviour
 {
+    public Vector3 offset;
 
     public GameObject disparo;
     public Quaternion rotacion;
@@ -21,7 +22,8 @@ public class SpawnDisparoPlayer : MonoBehaviour
 
     public void Disparo()
 	{
-        Instantiate(disparo, transform.position, rotacion);
+        Vector3 pos = (transform.position + offset);
+        Instantiate(disparo, pos, rotacion);
         Invoke("Disparo", 0.5f);
     }
 }

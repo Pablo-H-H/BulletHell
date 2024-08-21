@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoDisparo : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public int speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,12 +13,6 @@ public class MovimientoDisparo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        
     }
-
-    void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
-
 }
