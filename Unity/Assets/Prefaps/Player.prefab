@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6820872725460338067}
   - component: {fileID: 7405530790997561638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 179.19
-  m_Range: 138.16
+  m_Range: 28.170395
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626287120497294412}
   - component: {fileID: 8903360086387635898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 1783564119325060445}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.8213291, y: 32.3, z: -14.29}
+  m_LocalPosition: {x: -1.8213291, y: 32.3, z: 6.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -138,9 +138,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0, g: 0.5401464, b: 0.8392157, a: 0.84313726}
-  m_Intensity: 3.78
+  m_Intensity: 6
   m_Range: 67.92
-  m_SpotAngle: 136.40265
+  m_SpotAngle: 85.28118
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -240,6 +240,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d876bb69ea2834498935e7c5de21f59, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d876bb69ea2834498935e7c5de21f59, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -333,8 +341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5a735f98eb963429aff557cd710a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 550
-  lentoSpeed: 230
+  speed: 200
+  lentoSpeed: 75
   horizontalInput: 0
   forwardInput: 0
 --- !u!114 &1733562834557582415
@@ -349,5 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d146be83a553f64780ac4ff60c4a500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disparo: {fileID: 0}
+  offset: {x: 0, y: 0, z: 35}
+  disparo: {fileID: 4772341409191610285, guid: 43d19d7eda006e449a4d2556121fdd60, type: 3}
   rotacion: {x: 0, y: 0, z: 0, w: 0}
+  boton: 304
+  dispara: 0

@@ -8,22 +8,37 @@ public class SpawnDisparoPlayer : MonoBehaviour
 
     public GameObject disparo;
     public Quaternion rotacion;
+
+    public KeyCode boton;
+    public bool dispara;
     // Start is called before the first frame update
     void Start()
-    {
+    {           
         Invoke("Disparo", 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(boton))
+        {
+            dispara = true;
+            Disparo();
+        }
+        else if (Input.GetKeyUp(boton))
+        {
+            dispara = false;
+        }
     }
 
     public void Disparo()
 	{
         Vector3 pos = (transform.position + offset);
         Instantiate(disparo, pos, rotacion);
-        Invoke("Disparo", 0.5f);
+        if (dispara)
+        {
+            Invoke("Disparo", 0.5f);
+        }
+                    
     }
 }
